@@ -54,3 +54,30 @@ function handleArray(anyArray){
 }
 
 console.log(handleArray(marvel_heroes));
+
+
+//arror function
+// Traditional function
+function add(a, b) {
+    return a + b;
+}
+// Arrow function
+const add = (a, b) => a + b;
+const greet = name => `Hello, ${name}!`;
+console.log(greet("Alice")); // Output: Hello, Alice!
+
+// Using Arrow Functions in Array Methods
+const numbers = [1, 2, 3, 4, 5];
+const doubled = numbers.map(num => num * 2);
+console.log(doubled); // Output: [2, 4, 6, 8, 10]
+
+//Arrow functions do not have their own this; they inherit this from the surrounding scope.
+const obj = {
+    name: "Bob",
+    greet: function () {
+        const arrow = () => console.log(this.name);
+        arrow();
+    }
+};
+obj.greet(); // "Bob" (inherits `this` from `greet`)
+// Beware: Using arrow functions inside object methods may break behavior if this is needed.
