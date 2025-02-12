@@ -20,3 +20,37 @@ function myFunction() {
   let carName = "Volvo";
   // code here CAN use carName
 }
+
+//we dont know how many parameter will be passed we use rest operator it is same as spread but naming is different based on use case
+function calculateCartPrice(...num1) {
+  return num1;
+}
+
+console.log(calculateCartPrice(200, 400, 500, 2000));
+
+//Pasing object as an argument into functions
+
+const person = {
+  firstName: "Hrithik",
+  lastName: "Joshi",
+  age: 25,
+  eyeColor: "blue",
+};
+
+handleObject(person)
+
+function handleObject(person) {
+  console.log(
+    `Firstname is ${person.firstName} and Lastname is ${person.lastName}`
+  );
+}
+
+
+// passing array as an argument into functions
+const marvel_heroes = ["IronMan", "Thor", "Hulk"];
+
+function handleArray(anyArray){
+    return anyArray[1]
+}
+
+console.log(handleArray(marvel_heroes));
